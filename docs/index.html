@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>  
+    div.padded {  
+      padding-top: 0px;  
+      padding-right: 100px;  
+      padding-bottom: 0.25in;  
+      padding-left: 100px;  
+    }  
+  </style> 
+<title>Your Name  |  CS 184</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+<br />
+<h1 align="middle">Assignment 3: PathTracer</h1>
+    <h2 align="middle">Aditya Garg</h2>
+
+    <div class="padded">
+        <p>In the last project we created a mesh network that represented the geometry of an object. In ray generation and primitive intersections we use the concept of rays to figure out how that object would look to the human eye (with considerations of light sources,shadows, mirrors, opaque objects, etc).</p>
+
+    <h2 align="middle">Part 1: Ray Generation and Intersection</h2>
+        <p>A ray is determined by its origin point, a direction vector, and a min/max it can occupy. A ray intersects a triangle if for some t along the direction vector (within the min/max t) it is contained within the 3 points defining a triangle. We can formalize this by using barycentric coordinates u,v,w. If a point lies within a triangle defined by p0,p1,and p2 then its barycentric coordinates will follow u+v+w = 1 and none are nonnegative. Since w can be rewritten in terms of u and v (u+v+w = 1), we have 3 unknowns: u,v, and t. We can then use the definition of a ray to formulate a single equation combining these three unknowns and use Cramers rule to find out their values. If t is within min/max t and u,v,w are all nonnegative and add up to 1, then a ray intersects the triangle and the point of intersection is defined as r.o + t*r.d.
+        </p>
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/example_image.png" width="480px" />
+                    <figcaption align="middle">Results Caption: my bunny is the bounciest bunny</figcaption>
+                </tr>
+            </table>
+        </div>
+       
+        <h2 align="middle">Part 2: BVH</h2>
+        <p>A ray is determined by its origin point, a direction vector, and a min/max it can occupy. A ray intersects a triangle if for some t along the direction vector (within the min/max t) it is contained within the 3 points defining a triangle. We can formalize this by using barycentric coordinates u,v,w. If a point lies within a triangle defined by p0,p1,and p2 then its barycentric coordinates will follow u+v+w = 1 and none are nonnegative. Since w can be rewritten in terms of u and v (u+v+w = 1), we have 3 unknowns: u,v, and t. We can then use the definition of a ray to formulate a single equation combining these three unknowns and use Cramers rule to find out their values. If t is within min/max t and u,v,w are all nonnegative and add up to 1, then a ray intersects the triangle and the point of intersection is defined as r.o + t*r.d.
+        </p>
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/example_image.png" width="480px" />
+                    <figcaption align="middle">Results Caption: my bunny is the bounciest bunny</figcaption>
+                </tr>
+            </table>
+        </div>
+
+         <h2 align="middle">Part 1: Ray Generation and Intersection</h2>
+        <p>A ray is determined by its origin point, a direction vector, and a min/max it can occupy. A ray intersects a triangle if for some t along the direction vector (within the min/max t) it is contained within the 3 points defining a triangle. We can formalize this by using barycentric coordinates u,v,w. If a point lies within a triangle defined by p0,p1,and p2 then its barycentric coordinates will follow u+v+w = 1 and none are nonnegative. Since w can be rewritten in terms of u and v (u+v+w = 1), we have 3 unknowns: u,v, and t. We can then use the definition of a ray to formulate a single equation combining these three unknowns and use Cramers rule to find out their values. If t is within min/max t and u,v,w are all nonnegative and add up to 1, then a ray intersects the triangle and the point of intersection is defined as r.o + t*r.d.
+        </p>
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/example_image.png" width="480px" />
+                    <figcaption align="middle">Results Caption: my bunny is the bounciest bunny</figcaption>
+                </tr>
+            </table>
+        </div>
+
+    
+</div>
+</body>
+</html>
+
+
+
+
